@@ -1,7 +1,7 @@
 {
   "serverName": "Grok Games",
   "port": 8080,
-  "externalURL": "https://virtualtabletop.fly.dev/",
+  "externalURL": "https://play.grokgames.com.br/",
   "urlPrefix": "",
   "minifyJavascript": false,
   "forceTracing": false,
