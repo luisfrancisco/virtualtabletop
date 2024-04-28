@@ -1,0 +1,5 @@
+.dragging-shadow {
+  filter: brightness(0);
+  opacity: 0.3;
+  pointer-events: none;
+}

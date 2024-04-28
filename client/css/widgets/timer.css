@@ -1,0 +1,32 @@
+.timer {
+  font-size: 23px;
+  font-family: monospace;
+  text-align: right;
+  color: #525252;
+  padding-right:3px;
+  border-top: 1px solid var(--wcBorderNormal);
+  border-bottom: 1px solid var(--wcBorderNormal);
+  --wcBorderNormal: #00000000;
+  --wcBorderAlert: red;
+  --wcFontAlert: red;
+  --wcFontPaused: #6d6d6d;
+  --wcAnimationAlert: blinker 1s linear infinite;
+  --wcAnimationPaused: none;
+}
+
+
+.timer.alert {
+  color: var(--wcFontAlert) !important;
+  animation: var(--wcAnimationAlert);
+}
+
+@keyframes blinker {
+  50% {
+    border-color: var(--wcBorderAlert);
+  }
+}
+
+.timer.paused {
+  color: var(--wcFontPaused);
+  animation: var(--wcAnimationPaused) !important;
+}

@@ -1,0 +1,34 @@
+.deck {
+  display: none;
+}
+
+body.jsonEdit .deck, body.edit .deck {
+  display: block;
+}
+
+body.edit .deck {
+  background-color: white;
+  border: 3px solid var(--VTTblueDark);
+  color: var(--VTTblueDark);
+  box-sizing: border-box;
+
+  padding-top: 35px;
+  text-align: center;
+
+  font-size: 32px;
+}
+
+body.jsonEdit:not(.hitTest, .edit) .deck {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.edit .deck::before {
+  position: absolute;
+  right: 0;
+  height: 25px;
+  top: 8px;
+  left: 0;
+  content: "[cards]";
+  font-family: 'VTT-Symbols';
+}

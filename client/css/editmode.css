@@ -1,0 +1,171 @@
+#addOverlay {
+  width: var(--roomWidth);
+  height: var(--roomHeight);
+  transform: scale(var(--scale));
+  transform-origin: left top;
+  display: none;
+  grid-template-areas:         "cards pieces decorative"
+                               "cards pieces decorative"
+                               "cards interactive custom";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 20px;
+  gap: 20px;
+}
+
+#addOverlay > .category {
+  background: var(--roomColor);
+  border-radius: 32px;
+  text-align: center;
+}
+
+#addOverlay > .category > h2 {
+  color: black;
+}
+
+#addOverlay > .category > button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#addOverlay >.category.cards {
+  grid-area: cards;
+}
+
+#addOverlay >.category.pieces {
+  grid-area: pieces;
+}
+
+#addOverlay >.category.interactive {
+  grid-area: interactive;
+}
+
+#addOverlay >.category.decorative {
+  grid-area: decorative;
+}
+
+#addOverlay >.category.custom {
+  grid-area: custom;
+}
+
+#uploadBoard::before, #uploadToken::before{
+  content:'[upload]';
+}
+#addBasicWidget::before{
+  content:'[widget_add]';
+}
+#addCanvas::before{
+  content:'[color]';
+}
+#addSeat::before{
+  content:'[chair]';
+}
+#addSeatCounter::before{
+  content:'[chair]';
+}
+#addScoreboard::before{
+  content:'[scoreboard]';
+}
+#addHand::before{
+  content:'[holder_hand]';
+}
+#addOverlay .widget, #addOverlay textarea {
+  cursor: pointer;
+}
+
+#editJSONoverlay {
+  padding: 10px;
+}
+
+#editJSONoverlay h1 {
+  margin: 0;
+}
+
+#editJSONoverlay textarea {
+  height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  #editJSONoverlay textarea {
+    min-height: 100%;
+  }
+}
+
+#editOverlay {
+  overflow: auto;
+  color: black;
+  background-color:white;
+  padding: 1% 10%;
+  left: 5%;
+  top: 5%;
+  border-radius: 5vh;
+  height: 90%;
+  width: 90%;
+}
+
+.editOverlayButtonBar{
+  display: flex;
+}
+
+#editOverlay::-webkit-scrollbar-track {
+  margin: 5vh;
+}
+
+#editOverlay input[type=range]{
+  width:40%;
+}
+
+.editorButtonsTop{
+  display: grid !important;
+  grid-gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2px 0px;
+}
+
+.editorSpace{
+  display: block !important;
+  min-height: 10px;
+  flex-grow: 1000;
+}
+
+.editorButtonsContainer{
+  display: flex !important;
+  border-top: 2px solid var(--VTTblueLight);
+  flex-direction: column;
+}
+
+.editorButton{
+  color:white;
+  background-color: var(--VTTblue);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+.editorButton:hover{
+  background-color: var(--VTTblueDark);
+}
+
+#cardTypesList td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+#cardTypesList label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+#cardTypesList .count {
+  width: 40px;
+  text-align: right;
+}
+
+.flexContainer {
+  margin-top: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 0.7em;
+}

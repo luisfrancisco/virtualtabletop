@@ -1,0 +1,25 @@
+.widget.label {
+  font-size: 16px;
+  color: #6d6d6d;
+  text-align: center;
+}
+
+.widget.label > textarea {
+  display: block;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-align: inherit;
+  font: inherit;
+  width: 100%;
+  resize: none;
+  text-transform: inherit;
+  scrollbar-width: thin;
+}
+
+.widget.label > textarea:read-only {
+  pointer-events: none;
+}
+

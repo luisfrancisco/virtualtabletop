@@ -1,0 +1,51 @@
+.pile {
+  will-change: transform;
+}
+
+.pile .handle {
+  position: absolute;
+  left: var(--phPosition);
+  top: var(--phPosition);
+  width: var(--phSize);
+  height: var(--phSize);
+  font-size: calc(var(--phSize)/2);
+  background: #e4e4e4;
+  color: #6d6d6d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 9999999;
+}
+
+.pile .handle.small {
+  width: calc(var(--phSize)/2);
+  height: calc(var(--phSize)/2);
+  font-size: calc(var(--phSize)/4);
+}
+
+.pile .handle.right {
+  left: unset;
+  right: var(--phPosition);
+}
+
+.pile .handle.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pile .handle.bottom {
+  top: unset;
+  bottom: var(--phPosition);
+}
+
+.pile .handle.middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pile .handle.center.middle {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
